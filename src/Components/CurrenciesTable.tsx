@@ -1,8 +1,8 @@
 // @flow
 import * as React from 'react';
+// @ts-ignore
 import cl from "./currency.module.scss";
 import mockCurrencies from "../Mock/mock.currencies";
-import {Dispatch, SetStateAction} from "react";
 import {useTypedSelector} from "../hooks/useTypedSelector";
 import {useDispatch} from "react-redux";
 import {SET_CURRENCIES, TOGGLE_TABLE} from "../store/reducers/CurrenciesReducer";

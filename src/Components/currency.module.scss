@@ -61,12 +61,12 @@
   }
   &:last-child{
     width: 65px;
-    background: url(../angle-arrow-down.svg) no-repeat 50%;
+    background: url('../angle-arrow-down.svg') no-repeat 50%;
     background-size: 12px;
     color: transparent;
     border-radius: 0 4px 4px 0;
     &.active{
-      background: url(../angle-arrow-up-white.svg) no-repeat 50% ;
+      background: url('../angle-arrow-up-white.svg') no-repeat 50% ;
       background-size: 12px;
     }
   }

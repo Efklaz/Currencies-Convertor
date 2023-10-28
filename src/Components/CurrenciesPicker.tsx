@@ -1,5 +1,6 @@
 // @flow
 import * as React from 'react';
+// @ts-ignore
 import cl from "./currency.module.scss";
 import {data} from "../Mock/mock.currencies";
 import {Dispatch, MutableRefObject, SetStateAction, useEffect} from "react";

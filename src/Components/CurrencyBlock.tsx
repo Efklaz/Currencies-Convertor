@@ -1,6 +1,7 @@
 // @flow
 import * as React from 'react';
 import { useEffect, useRef, useState} from "react";
+// @ts-ignore
 import cl from './currency.module.scss';
 import {CurrenciesTable} from "./CurrenciesTable";
 import {CurrenciesPicker} from "./CurrenciesPicker";
