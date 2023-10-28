@@ -1,6 +1,6 @@
 import React from 'react';
-import logo from './logo.svg';
-import cl from './App.module.scss';
+// @ts-ignore
+import cl from "./App.module.scss";
 import {CurrencyBlock} from "./Components/CurrencyBlock";
 import {useTypedSelector} from "./hooks/useTypedSelector";
 import {useDispatch} from "react-redux";
