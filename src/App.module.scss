@@ -1,0 +1,31 @@
+.container{
+  @media (max-width: 700px) {
+    flex-direction: column;
+  }
+  @media (min-width: 701px) and (max-width: 1000px) {
+    padding: 0 5px;
+  }
+  width: 930px;
+  margin: 30px auto 0 auto;
+  display: flex;
+  flex: 1 1 auto;
+  position: relative;
+  align-items: center;
+}
+.transfer{
+  @media (max-width: 700px) {
+    transform: translateY(0);
+  }
+  @media (min-width: 701px) and (max-width: 1000px) {
+    margin: 0 8px;
+    background-size: 35px;
+    min-width: 35px;
+  }
+  min-width: 50px;
+  height: 50px;
+  background: url(./transfer.svg) no-repeat 50%;
+  background-size: 50px;
+  margin: 0 30px;
+  cursor: pointer;
+  transform: translateY(40px);
+}
