@@ -6,7 +6,7 @@ import mockCurrencies from "../Mock/mock.currencies";
 import {useTypedSelector} from "../hooks/useTypedSelector";
 import {useDispatch} from "react-redux";
 import {SET_CURRENCIES, TOGGLE_TABLE} from "../store/reducers/CurrenciesReducer";
-import {SET_ACTIVE} from "../store/actions/actionCreators";
+import {SET_ACTIVE, setToValue} from "../store/actions/actionCreators";
 
 type Props = {
     from : boolean;
@@ -26,6 +26,8 @@ export function CurrenciesTable({from}: Props) {
             if(toShow.currencies.includes(div.dataset.cur)){
                 dispatch({type : SET_ACTIVE, payload : {value : div.dataset.cur, from : from}});
                 dispatch({type : TOGGLE_TABLE, payload : {value : false, from : from}});
+                dispatch(setToValue({value : '0', from: from}));
+                dispatch(setToValue({value : '0', from: !from}));
                 return;
             }
             let newCurrencies = [...toShow.currencies].slice(0,3);
@@ -33,6 +35,8 @@ export function CurrenciesTable({from}: Props) {
             dispatch({type: SET_CURRENCIES, payload : {value : newCurrencies, from : from}});
             dispatch({type : SET_ACTIVE, payload : {value : div.dataset.cur, from : from}});
             dispatch({type : TOGGLE_TABLE, payload : {value : false, from : from}});
+            dispatch(setToValue({value : '0', from: from}));
+            dispatch(setToValue({value : '0', from: !from}));
 
 
         }
