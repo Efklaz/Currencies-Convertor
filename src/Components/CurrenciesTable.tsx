@@ -11,6 +11,10 @@ import {SET_ACTIVE} from "../store/actions/actionCreators";
 type Props = {
     from : boolean;
 };
+let firstTable = mockCurrencies.slice(0, 11);
+let secondTable = mockCurrencies.slice(11, 22);
+let thirdTable = mockCurrencies.slice(22, 33);
+
 
 export function CurrenciesTable({from}: Props) {
     const state = useTypedSelector((state)=> state.currenciesList);
@@ -35,14 +39,36 @@ export function CurrenciesTable({from}: Props) {
     }
     return (
         <div className={cl.currencyTable}>
-            {
-                mockCurrencies.map((el, ind)=>{
-                    return <div key={ind} className={cl.row} data-cur={el[0]} onClick={changeCurr}>
-                        <div className={cl.description}>{el[1]}</div>
-                        <div className={cl.bold}>{el[0]}</div>
-                    </div>
-                })
-            }
+            <div>
+                {
+                    firstTable.map((el, ind)=>{
+                        return <div key={ind} className={cl.row} data-cur={el[0]} onClick={changeCurr}>
+                            <div className={cl.description}>{el[1]}</div>
+                            <div className={cl.bold}>{el[0]}</div>
+                        </div>
+                    })
+                }
+            </div>
+            <div>
+                {
+                    secondTable.map((el, ind)=>{
+                        return <div key={ind} className={cl.row} data-cur={el[0]} onClick={changeCurr}>
+                            <div className={cl.description}>{el[1]}</div>
+                            <div className={cl.bold}>{el[0]}</div>
+                        </div>
+                    })
+                }
+            </div>
+            <div>
+                {
+                    thirdTable.map((el, ind)=>{
+                        return <div key={ind} className={cl.row} data-cur={el[0]} onClick={changeCurr}>
+                            <div className={cl.description}>{el[1]}</div>
+                            <div className={cl.bold}>{el[0]}</div>
+                        </div>
+                    })
+                }
+            </div>
         </div>
     );
 };
